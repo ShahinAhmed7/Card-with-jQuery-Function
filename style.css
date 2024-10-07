@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*
+ *****************************************
+    >>> | 01 Browser Reset & Common CSS|
+ *****************************************
+*/
+html, body{
+    height: 100%;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #676a6c;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:focus,
+a:hover,
+a:visited {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*
+ *****************************************
+ >>> | 02. Card css Start
+ *****************************************
+*/
+.cardArea{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.container {
+    max-width: 810px;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+
+.flexRow {
+    display: flex;
+    align-content: flex-start;
+    gap: 30px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.singleCard {
+    display: flex;
+    width: 390px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.10);
+    background: #fff;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px 10px 0px 0px;
+    border: 5px solid;
+    border-image-source: linear-gradient(154.28deg, #A47E62 26.26%, rgba(255, 249, 245, 0.91) 99.05%);
+    -webkit-border-image-slice: 2;
+    border-image-slice: 2;
+    background: linear-gradient(154.28deg, #A47E62 26.26%, rgba(255, 249, 245, 0.91) 99.05%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
+
+.cardHeadeBdr {
+    padding: 22px 22px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(93deg, #022C60 6.5%, #5F96CE 99.97%);
+}
+
+.cardHeader h5 {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+.cardBody {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    background: #F0F5F8;
+}
+
+.redMoreBtn {
+    display: flex;
+    height: 34px;
+    padding: 0px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #112D51;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+}
+
+.cardFooter {
+    display: flex;
+    padding: 23px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: flex-end;
+    height: 100%
+}
+
+.cardBody ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.cardBody ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+.cardBody ul li svg {
+    width: 20.565px;
+    height: 20px;
+}
+
+.cardBody ul li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 20.565px;
+    height: 20px;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.cardBody ul li.pinmap:after {
+    background: url(assets/icon/pin-map.svg);
+}
+
+.cardBody ul li.solarMap:after {
+    background: url(assets/icon/solar-map.svg);
+}
+.cardBody ul li.calendar:after {
+    background: url(assets/icon/calendar.svg);
+}
+
+.cardBody ul li {
+    color: #5A607A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    padding-left: 26px;
+}
+
+.cardBody ul li.bold {
+    color: #2867C6;
+    font-weight: 700;
+}
+
+.categoryBtn {
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 1px solid #F0F0F0;
+    background: #FFF;
+    text-decoration: none;
+    color: #5A607A;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    max-width: 310px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    gap: 5px 15px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.category.showMore {
+    height: auto;
+    overflow: initial;
+}
+
+.moreCategory {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 5px 15px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-top: -5px
+}
+
+.showMoreBtn {
+    color: #2867C6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0;
+    border: none;
+    background: no-repeat;
+    cursor: pointer;
+}
+
+.loadMoreFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+button#loadMoreBtn {
+    display: flex;
+    width: 230px;
+    height: 46px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #112D51;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    margin-top: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
